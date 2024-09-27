@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <p>Por favor completa todos los campos con la informacion requerida</p>
+    <form action="#" method="post">
+        <fieldset>
+            <label for="nombre">Ingresa tu nombre: 
+                <input type="text" id="nombre" name="nombre" required>
+            </label>
+            <label for="apellido">Ingresa tu apellido: 
+                <input type="text" id="apellido" name="apellido" required>
+            </label>
+            <label for="email">Ingresa tu email: 
+                <input type="email" id="email" name="email" required>
+            </label>
+            <label for="pass">Ingresa tu password: 
+                <input type="pass" id="pass" name="pass" pattern="[a-z0-5]{8,}" required>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Typo de cuenta(requerido)</legend>
+            <label for="personal">
+                <input type="radio" name="tipo-cuenta" class="enlinea" checked>Personal
+            </label>
+            <label for="negocio"><label>
+                <input type="radio" name="tipo-cuenta" class="enlinea" checked>Negocio
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="foto">Agrega tu foto de perfil: 
+                <input type="file" name="foto">
+            </label>
+            <label for="edad">Agrega tu edad en años: 
+                <input type="number" name="edad" min="13" max="120"> 
+            </label>
+            <label for="referencia">¿Como supiste de nosotros?
+                <select name="referencia" id="referencia">
+                    <option value="">Selecciona una opcion</option>
+                    <option value="1">Facebook</option>
+                    <option value="2">Instagram</option>
+                    <option value="3">Google</option>
+                    <option value="4">Tik Tok</option>
+                    <option value="5">Otro</option>
+                </select>
+            </label>
+            <label for="mensaje">Ingresa un mensaje: 
+                <textarea name="mensaje" id="mensaje" rows="3" cols="30" placeholder="Mensaje"></textarea>
+            </label>
+        </fieldset>
+        <label for="terminos">
+            <input type="checkbox" class="enlinea" name="terminos">
+            Acepto los <a href="">Terminos y condiciones</a>
+        </label>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
